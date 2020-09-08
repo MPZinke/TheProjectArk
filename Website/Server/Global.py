@@ -4,18 +4,16 @@ from os import getcwd as __OS_getcwd;
 from pathlib import Path;
 import sys;
 
+
 PROJECT_DIR = str(Path(__OS_getcwd()).parent);
-MAIN_HTML_DIR = PROJECT_DIR+"/HTML/Main";
+MAIN_HTML_DIR = PROJECT_DIR+"/HTML/Root";
 STATIC_HTML_DIR = PROJECT_DIR+"/HTML/Static";
 
 print(PROJECT_DIR);
 
-# sys.path.append("./Connections")
 
-# from DBConnect import connect_to_DB
-
-
-# CNX, CURSOR = connect_to_DB();
+from DBConnect import connect_to_DB;
+CNX, CURSOR = connect_to_DB();
 
 
 # use results from query and create an array of dictionaries for each row in the DB.

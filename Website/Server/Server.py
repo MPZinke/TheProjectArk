@@ -20,7 +20,7 @@ app.secret_key = random_keygen(64)
 
 # import other route
 __SYS_path.append(PROJECT_DIR+"/Server/Routes");
-import Main
+import Root
 
 
 # import Requests

@@ -5,7 +5,7 @@ from pathlib import Path;
 import sys;
 
 
-PROJECT_DIR = str(Path(__OS_getcwd()).parent);
+PROJECT_DIR = str(Path(__OS_getcwd()));
 MAIN_HTML_DIR = PROJECT_DIR+"/HTML/Root";
 STATIC_HTML_DIR = PROJECT_DIR+"/HTML/Static";
 

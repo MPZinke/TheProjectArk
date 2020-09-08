@@ -7,6 +7,8 @@ from sys import path as __SYS_path;
 
 from Global import *
 
+# import other routes
+from Routes.Root import Root_Blueprint;
 
 # randomly create a key to secure the session
 def random_keygen(length):
@@ -15,12 +17,11 @@ def random_keygen(length):
 	return "".join([ascii_chars[randint(0, 99)] for x in range(length)])
 
 
-app = Flask(__name__, template_folder=MAIN_HTML_DIR, static_folder=STATIC_HTML_DIR)
-app.secret_key = random_keygen(64)
 
-# import other route
-__SYS_path.append(PROJECT_DIR+"/Server/Routes");
-import Root
+application = Flask(__name__, template_folder=MAIN_HTML_DIR, static_folder=STATIC_HTML_DIR);
+application.register_blueprint(Root_Blueprint);
+application.secret_key = random_keygen(64);
+
 
 
 # import Requests
@@ -29,7 +30,8 @@ import Root
 
 
 def main():
-	app.run()
+	application.debug = True
+	application.run()
 
 
 if __name__ == '__main__':

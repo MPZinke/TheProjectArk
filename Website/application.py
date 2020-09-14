@@ -19,12 +19,12 @@ def random_keygen(length):
 
 
 application = Flask(__name__, template_folder=MAIN_HTML_DIR, static_folder=STATIC_HTML_DIR);
-application.register_blueprint(Root_Blueprint);
+application.register_blueprint(Root_Blueprint);  # import Requests
 application.secret_key = random_keygen(64);
 
 
 
-# import Requests
+
 
 
 

@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<link rel='icon' href='{{ url_for("static", filename="Images/Logo/TPA_Logo_min_small.2020.09.07.png") }}'>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 		{# <link rel='stylesheet' href='{{ url_for("static", filename="Libraries/bootstrap-4.5.2/css/bootstrap.css") }}'> #}
@@ -13,7 +14,8 @@
 			<a class='navbar-brand' href='/'>
 				<img src='{{ url_for("static", filename="Images/Logo/TPA_Logo_min_small.2020.09.07.png") }}'>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" 
+			aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">

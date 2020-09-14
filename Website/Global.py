@@ -1,5 +1,6 @@
 
 
+from flask import render_template, request, session;
 from os import getcwd as __OS_getcwd;
 from pathlib import Path;
 import sys;
@@ -18,3 +19,7 @@ def __GLOBAL__associate_query(cursor):
 	return [{header : (row[x].decode() if row[x] else None) for x, header in enumerate(headers)} \
 			for row in cursor._rows];
 
+
+def __GLOBAL__set_location_and_render_template(template, params={}):
+	session["previous"] = request.path;
+	return render_template(template, **params);

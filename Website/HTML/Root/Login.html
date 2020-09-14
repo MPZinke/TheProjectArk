@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel='icon' href='{{ url_for("static", filename="Images/Logo/TPA_Logo_min_small.2020.09.07.png") }}'>
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+		{# <link rel='stylesheet' href='{{ url_for('static', filename='Libraries/bootstrap-4.5.2/css/bootstrap.css') }}'> #}
+		{# <script type='text/javascript' src='{{ url_for('static', filename='Libraries/google-hosted-libraries/jquery.min.js') }}'></script> #}
+		{# <script type='text/javascript' src='{{ url_for('static', filename='Libraries/google-hosted-libraries/google_library-5.15.1.min.js') }}'></script> #}
+	</head>
+
+	<body>
+		<div style='margin-left:25%;margin-right:25%;'>
+			<form method='POST'>
+				<table style='width:100%;'>
+					<tr style='width:100%;'>
+						<td style='width:100%;text-align:center'>
+							<img src='{{ url_for("static", filename="Images/Logo/TPA_Logo_min.2020.09.07.png") }}'
+							style='margin:auto;'>
+							<h3>
+								Sign In to The Project Ark
+							</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Username or Email
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input name='__SIGNIN__name_input' class='form-control'>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Password
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input name='__SIGNIN__password_input' class='form-control'>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button name='__SIGNIN__button' class='btn btn-info' type='submit' style='width:100%'>
+								Sign In
+							</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>
